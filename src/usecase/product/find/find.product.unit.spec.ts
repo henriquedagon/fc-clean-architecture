@@ -33,14 +33,14 @@ describe("Unit test find product use case", () => {
     it("should throw an error when type is missing", async () => {
         const productRepository = MockRepository();
         productRepository.find.mockImplementation(() => {
-            throw new Error("Product type not supported");
+            throw new Error("product: Product type not supported");
         });
         const productFindUseCase = new FindProductUseCase(productRepository);
 
         input.type = "";
 
         await expect(productFindUseCase.execute(input)).rejects.toThrow(
-            "Product type not supported"
+            "product: Product type not supported"
         );
     });
 

@@ -10,7 +10,7 @@ export default class Customer extends Entity {
   private _rewardPoints: number = 0;
 
   constructor(id: string, name: string) {
-    super();
+    super(id);
     this._id = id;
     this._name = name;
     this.validate();

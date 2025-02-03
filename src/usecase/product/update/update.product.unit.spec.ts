@@ -37,27 +37,4 @@ describe("Unit test update product use case", () => {
             price: inputA.price,
         });
     });
-
-    // it("should thrown an error when name is missing", async () => {
-    //     const productRepository = MockRepository();
-    //     const productUpdateUseCase = new UpdateProductUseCase(productRepository);
-    //
-    //     inputA.name = "";
-    //
-    //     await expect(productUpdateUseCase.execute(inputA)).rejects.toThrow(
-    //         "Name is required"
-    //     );
-    // });
-    //
-    // it("should thrown an error when price is negative", async () => {
-    //     const productRepository = MockRepository();
-    //     const productUpdateUseCase = new UpdateProductUseCase(productRepository);
-    //
-    //     inputA.name = "Product 1";
-    //     inputA.price = -1;
-    //
-    //     await expect(productUpdateUseCase.execute(inputA)).rejects.toThrow(
-    //         "Price must be greater than or equal to zero"
-    //     );
-    // });
 });
